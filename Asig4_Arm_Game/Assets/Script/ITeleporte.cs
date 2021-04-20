@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ITeleporte
+public interface ITeleporte:IAbility
 {
 
 }
