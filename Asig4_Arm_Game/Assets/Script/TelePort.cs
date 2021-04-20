@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TelePort : MonoBehaviour
+public class TelePort : MonoBehaviour,ITeleporte
 {
-    // Start is called before the first frame update
-    void Start()
+    public void disableAbility()
     {
-        
+        throw new System.NotImplementedException();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void enableAbility(CenterController centerController)
     {
-        
+        throw new System.NotImplementedException();
     }
+
+    public bool isEnabled()
+    {
+        throw new System.NotImplementedException();
+    }
+
+
 }

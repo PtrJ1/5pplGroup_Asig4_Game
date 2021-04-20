@@ -25,10 +25,7 @@ public class ChargeArm : MonoBehaviour, IChargeArm
         throw new System.NotImplementedException();
     }
 
-    public void onInitial()
-    {
-        throw new System.NotImplementedException();
-    }
+ \
 
     public void release()
     {
