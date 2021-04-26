@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TelePort : MonoBehaviour,ITeleporte
+public class Dash : MonoBehaviour, IDash
 {
     public void disableAbility()
     {
