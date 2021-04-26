@@ -9,6 +9,7 @@ public class RotateArm : MonoBehaviour, IRotateArm
     Rigidbody2D rig;
     bool _isEnable = false;
     bool _isActivate = false;
+    bool isOnRight = false;
     [SerializeField]
     float rotateSpeed = 50;
     [SerializeField]
@@ -39,8 +40,16 @@ public class RotateArm : MonoBehaviour, IRotateArm
     public void rotateLeft()
     {
         rotate(-rotateSpeed);
+        isOnRight = false;
     }
 
+    public void fastRotate()
+    {
+        if(isOnRight)
+        rotate(rotateSpeed * 3.5f);
+        else
+            rotate(-rotateSpeed * 3.5f);
+    }
     void rotate(float Speed)
     {
         joint2D.useMotor = true;
@@ -52,6 +61,7 @@ public class RotateArm : MonoBehaviour, IRotateArm
     public void rotateRight()
     {
         rotate(rotateSpeed);
+        isOnRight = true;
     }
 
     public void stopRotate()

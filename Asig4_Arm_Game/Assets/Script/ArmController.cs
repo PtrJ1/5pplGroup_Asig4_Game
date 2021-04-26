@@ -9,6 +9,8 @@ public class ArmController : MonoBehaviour
     BoxCollider2D boxCollider;
     SpriteRenderer renderer;
     Sprite orignSprite;
+    [SerializeField]
+    HitBox hitBox; // to detect whether this arm is hitng something
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +46,14 @@ public class ArmController : MonoBehaviour
 
         renderer.sprite = null;
         boxCollider.isTrigger = true;
+    }
+    public bool isHiting()
+    {
+        return hitBox.isHiting();
+    }
+    public Vector2 getHitPos()
+    {
+        return hitBox.getHitPos();
     }
 
     }

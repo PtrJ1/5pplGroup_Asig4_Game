@@ -69,6 +69,7 @@ public class CenterController : MonoBehaviour
         try
         {
             landHit = this.GetComponentInChildren<ILandHit>();
+            landHit.enableAbility(this);
         }
         catch
         {
@@ -132,9 +133,10 @@ public class CenterController : MonoBehaviour
             slimeArm.activate();
         if (!Input.GetKey(KeyCode.W)&&slimeArm.isEnabled())
             slimeArm.deactivate();
-        if (Input.GetKey(KeyCode.J)&&grapple.isEnabled()&&rotateArm.isActivate())
+        if (Input.GetKey(KeyCode.K)&&grapple.isEnabled()&&rotateArm.isActivate())
             shootHook();
-   
+        if (Input.GetKeyDown(KeyCode.J) && landHit.isEnabled() && rotateArm.isActivate())
+            landHit.Hit();
 
     }
 
@@ -193,5 +195,5 @@ public class CenterController : MonoBehaviour
         grapple.shootHook();
     }
 
-   
+ 
 }

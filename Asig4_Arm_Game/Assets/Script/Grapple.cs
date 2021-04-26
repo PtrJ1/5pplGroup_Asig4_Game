@@ -66,7 +66,7 @@ public class Grapple : MonoBehaviour, IGrapple
    IEnumerator waitForDash()
     {
         float restTime = maxHoldTime;
-       while(restTime>=0&&Input.GetKey(KeyCode.J))
+       while(restTime>=0&&Input.GetKey(KeyCode.K))
         {
 
             yield return new WaitForEndOfFrame();
