@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface ITeleporte:IAbility
+public interface IDash:IAbility
 {
 
 }
